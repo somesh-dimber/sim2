@@ -1,0 +1,50 @@
+<settings>
+  <proxies>
+      <proxy>
+      <id>optional</id>
+      <active>true</active>
+      <protocol>http</protocol>
+      <username>proxyuser</username>
+      <password>proxypass</password>
+      <host>10.24.19.246</host>
+      <port>8080</port>
+      <nonProxyHosts>local.net|some.host.com</nonProxyHosts>
+    </proxy>
+	
+</proxies>
+  <servers>
+ <!--   <server>
+      <id>releases</id>
+      <username>deployment</username>
+      <password>deployment</password>
+    </server>
+    <server>
+      <id>snapshots</id>
+      <username>deployment</username>
+      <password>deployment</password>
+    </server> -->
+	<server>
+      <id>project</id>
+      <username>sdimber</username>
+      <password>Kabhi=786</password>
+    </server>
+  </servers>
+  
+  
+  <localRepository>C:\Users\A80012217\.m2\repository</localRepository>
+  <mirrors>
+    <mirror>
+      <id>sbs.public</id>
+      <name>SBS mirror</name>
+      <url>https://sbs.t-systems.com/nexus/content/groups/public/</url>
+      <mirrorOf>external:*,!project,!wso2-public,!wso2-maven2-repository,!wso2-nexus,!wso2,!wso2-maven2-repository-1,!wso2-nexus-repository-1,!SmartBearPluginRepository,!cloudera</mirrorOf>
+    </mirror>
+   <!-- <mirror>
+      <id>sbs-wso2</id>
+      <name>SBS wso2 mirror</name>
+      <url>https://sbs.t-systems.com/nexus/content/groups/wso2-public/</url>
+      <mirrorOf>wso2-public,wso2-maven2-repository,wso2-nexus,wso2,wso2-maven2-repository-1,wso2-nexus-repository-1</mirrorOf>
+    </mirror> -->
+  </mirrors>
+
+</settings>
