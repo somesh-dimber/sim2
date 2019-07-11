@@ -11,6 +11,7 @@ public class App
 
        
         System.out.println( "Hello World!New Test" );
+        System.out.println( "Print comand 2" );
 
     }
 }
