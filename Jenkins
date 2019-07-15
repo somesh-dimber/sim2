@@ -3,11 +3,11 @@
 stage('Demo') {
 
   echo 'Hello World'
-
+checkStatus(body)
   sayHello 'Dave'
   
-  checkStatus(body)
- evenOrOdd(currentBuild.getNumber())
+  
+ 
   
 
  
