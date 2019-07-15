@@ -3,8 +3,9 @@
 stage('Demo') {
 
   echo 'Hello World'
-checkStatus(body)
+
   sayHello 'Dave'
+  evenOrOdd(currentBuild.getNumber())
   
   
  
