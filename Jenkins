@@ -1,15 +1,12 @@
 @Library('sim2@master')_
 
-stage('Demo') {
-
-  echo 'Hello World'
-
-  sayHello 'Dave'
+node{  
+  
   def test = load 'evenOrOdd.groovy'
   
   echo test.evenOrOdd()
   
-  
+  }
   
  
   
