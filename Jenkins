@@ -1,4 +1,4 @@
-@Library('sim2')_
+@Library('sim2@master')_
 
 stage('Demo') {
 
