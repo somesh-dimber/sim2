@@ -1,15 +1,14 @@
 @Library('sim2@master')_
 
-import evenOrOdd
-
 stage('Demo') {
 
   echo 'Hello World'
 
   sayHello 'Dave'
   
-  evenOrOdd(currentBuild.getNumber())
-  
+  GroovyShell shell = new evenOrOdd
+  def tools =shell.parse(new File('evenOrOdd.groovy'))
+  tools.evenOrOdd()
   
  
   
