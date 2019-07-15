@@ -7,6 +7,7 @@ def call() {
 		echo "Number: " + it
 	}
 
+	
 	currentBuild.result = 'SUCCESS' //FAILURE to fail
 	return this
 }
