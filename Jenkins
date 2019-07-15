@@ -1,5 +1,7 @@
 @Library('sim2@master')_
 
+import evenOrOdd
+
 stage('Demo') {
 
   echo 'Hello World'
