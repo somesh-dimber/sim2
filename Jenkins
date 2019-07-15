@@ -5,10 +5,11 @@ stage('Demo') {
   echo 'Hello World'
 
   sayHello 'Dave'
+  def test = load 'evenOrOdd.groovy'
   
-  GroovyShell shell = new evenOrOdd
-  def tools =shell.parse(new File('evenOrOdd.groovy'))
-  tools.evenOrOdd()
+  echo test.evenOrOdd()
+  
+  
   
  
   
