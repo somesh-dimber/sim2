@@ -1,4 +1,5 @@
 #!/usr/bin/env groovy
+#!/usr/bin/env groovy
 def call(int buildNumber) {
 	if (buildNumber % 2 == 0) {
 	  pipeline {
