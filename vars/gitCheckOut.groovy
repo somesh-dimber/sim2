@@ -1,5 +1,5 @@
 def call() {
 	
-	git 'https://github.com/somesh-dimber/sim2.git'
+	["git", "clone", "https://github.com/somesh-dimber/sim2.git", ""].execute()
 		  }
 		  
