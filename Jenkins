@@ -8,7 +8,7 @@ stage('Demo') {
   
  evenOrOdd(currentBuild.getNumber())
   
- stage(Check Status){
+
  
  checkStatus(body)
  
