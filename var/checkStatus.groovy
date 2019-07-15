@@ -1,6 +1,6 @@
 #!/usr/bin/env groovy
 
-def call(body) {
+def call() {
 	echo "Check status"
 
 	(1..3).each {
