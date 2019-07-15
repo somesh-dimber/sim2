@@ -6,6 +6,8 @@ stage('Demo') {
 
   sayHello 'Dave'
   
+ evenOrOdd(currentBuild.getNumber())
+  
  stage(Check Status){
  
  checkStatus(body)
