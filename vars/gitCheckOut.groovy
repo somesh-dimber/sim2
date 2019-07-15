@@ -1,8 +1,5 @@
-def call(Map stageParams) {
+def call() {
 	
-		checkout([
-			$class: 'GitSCM',
-			branches: [[name:  stageParams.branch ]],
-			userRemoteConfigs: [[ url: stageParams.url ]]
-		])
-	  }
+	git 'https://github.com/somesh-dimber/sim2.git'
+		  }
+		  
