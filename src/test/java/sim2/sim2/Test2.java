@@ -17,13 +17,6 @@ public class Test2 {
 		assertTrue(c==3);
 	}
 	
-	@Test
-	public void simpleTestFail()
-	{
-		int a=1;
-		int b=2;
-		int c=a+b;
-		assertTrue(c==4);
-	}
+	
 	
 }
