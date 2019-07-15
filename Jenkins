@@ -6,7 +6,7 @@ stage('Demo') {
 
   sayHello 'Dave'
   
- stage(Check Status){
+ stage(checkStatus){
  
  checkStatus
  
