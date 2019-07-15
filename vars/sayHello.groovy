@@ -5,7 +5,7 @@ def call(body) {
 	(1..3).each {
 		echo "Number: " + it
 	}
-
+echo "Inside Hello Statu"
 	currentBuild.result = 'SUCCESS' //FAILURE to fail
 	return this
 }
