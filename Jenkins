@@ -1,32 +1,9 @@
-pipeline {
-    agent any
+@Library('sim2')_
 
-    stages {
-        stage ('Compile Stage') {
+stage('Demo') {
 
-            steps {
-                withMaven(maven : 'Maven') {
-                    sh 'mvn clean compile'
-                }
-            }
-        }
+  echo 'Hello World'
 
-        stage ('Testing Stage') {
+  sayHello 'Dave'
 
-            steps {
-                withMaven(maven : 'Maven') {
-                    sh 'mvn test'
-                }
-            }
-        }
-
-
-        stage ('Deployment Stage') {
-            steps {
-                withMaven(maven : 'Maven') {
-                    sh 'mvn deploy'
-                }
-            }
-        }
-    }
 }
