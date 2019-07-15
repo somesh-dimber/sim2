@@ -1,5 +1,5 @@
 #!/usr/bin/env groovy
-
+pipeline{
 def call(body) {
     echo "Check status"
 
@@ -9,4 +9,5 @@ def call(body) {
 
     currentBuild.result = 'SUCCESS' //FAILURE to fail
     return this
+}
 }
