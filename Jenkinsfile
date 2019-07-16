@@ -1,6 +1,10 @@
 node {
    def mvnHome
-   stage('Preparation') { // for display purposes
+   try{
+       
+   
+
+   stage('\u2776 CheckOut') { // for display purposes
       // Get some code from a GitHub repository
       git 'https://github.com/somesh-dimber/sim2.git'
       // Get the Maven tool.
@@ -8,6 +12,14 @@ node {
       // **       in the global configuration.           
       mvnHome = tool 'maven3'
    }
+  }
+  catch(exc){
+  
+  echo "Git  failed"
+      }
+  
+
+   
    stage('Build') {
       // Run the maven build
       withEnv(["M2_HOME=$mvnHome"]) {
