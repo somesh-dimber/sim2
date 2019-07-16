@@ -5,7 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 public class AppTest {
-
+//Adding Comment
 	@Test
 	public void test() {
 		System.out.println("Square Test");
