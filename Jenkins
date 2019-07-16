@@ -6,7 +6,7 @@
 
 
 node{
-
+log.info 'Starting Pipeline'
 stage ('Checkout'){
 log.info 'Starting'
     gitCheckOut()
