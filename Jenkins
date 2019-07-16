@@ -40,7 +40,7 @@ stage('Test'){
 stage('Deploy'){
     
     steps {
-            echo "Step Deploy"
+            sh "Step Deploy"
              // buildMaven()
             }
    
