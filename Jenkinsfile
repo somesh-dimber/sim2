@@ -31,7 +31,7 @@ node {
          if (isUnix()) {
             sh '"$M2_HOME/bin/mvn" -Dmaven.test.failure.ignore clean package'
          } else {
-            bat(/"%M2_HOME%\bin\mvn" -Dmaven.test.failure.ignore clean package/)
+            bat(/"%M2_HOME%\bin\mvn" -Dmaven.test.failure.ignore verify package/)
          }
       }
    }
