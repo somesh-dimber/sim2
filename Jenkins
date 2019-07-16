@@ -27,4 +27,3 @@ stage('Deploy'){
     buildMaven()
   }
 }
-© 2019 GitHub, Inc.
