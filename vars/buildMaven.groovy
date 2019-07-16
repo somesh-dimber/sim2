@@ -1,7 +1,7 @@
 def call() {
 	
 	
-	mvnHome = tool 'maven3'
+	 def mvnHome = tool 'maven3'
 	def pom = readMavenPom file: 'pom.xml'
 	
 	withEnv(["M2_HOME=$mvnHome"]) {
