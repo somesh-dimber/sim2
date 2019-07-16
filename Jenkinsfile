@@ -18,9 +18,10 @@ node {
   echo "Git  failed"
       }
   
-
-   
-   stage('Build') {
+try {
+    
+  
+   stage('\u2777 Build') {
       // Run the maven build
       withEnv(["M2_HOME=$mvnHome"]) {
          if (isUnix()) {
@@ -30,6 +31,11 @@ node {
          }
       }
    }
+   }
+   catch(exc){
+       echo "Build Failed"
+   }
+
    stage('Results') {
       junit '**/target/surefire-reports/TEST-*.xml'
       archiveArtifacts 'target/*.jar'
