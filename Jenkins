@@ -1,29 +1,32 @@
 #!/usr/bin/env groovy
-@Library('sim2@feature1')_
+@Library('sim2')_
 
 //log.info 'Starting'
 //log.warning 'Nothing to do!'
 
 
 node{
-log.info 'Starting Pipeline'
-stage ('Checkout'){
-log.info 'Starting'
-    gitCheckOut()
- log.info 'Finished Check Out'
+	log.info 'Starting Pipeline'
+			stage ('Checkout'){
+				    log.info 'Starting'
+   					gitCheckOut()
+ 					log.info 'Finished Check Out'
    
-}
+				}
  
-stage('Test'){
+					stage('Deploy'){
 
-    buildTest()
-}
- if (env.BRANCH_NAME == 'master'){
-log.info 'Inside if statement'
-stage('Deploy'){
+    							buildMaven()
+    							
+					}
+ 				if (env.BRANCH_NAME == 'master'){
+
+						log.info 'Inside if statement'
+					
+					stage('TEST'){
     
-    buildMaven()
-  }
-    }
+    					buildTest()
+  						}
+   					 }
   
-}
+			}
