@@ -1,4 +1,4 @@
-node {
+pipeline {
    def mvnHome
    try{
        
@@ -52,7 +52,7 @@ try {
       archiveArtifacts 'target/*.jar'
    }
    
-  stage('Brabch Verifier'){
+  stage('Branch Verifier'){
   agent any
   when{
     branch 'feature1'
