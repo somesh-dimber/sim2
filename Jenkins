@@ -6,6 +6,7 @@
 
 pipeline{
 
+stages{
 stage ('Checkout'){
     gitCheckOut()
    
@@ -26,5 +27,6 @@ stage('Test'){
 stage('Deploy'){
     
     buildMaven()
+  }
   }
 }
