@@ -15,6 +15,7 @@ public class Test2 {
 		int b=2;
 		int c=a+b;
 		assertTrue(c==3);
+		System.out.println("In Test simpleTestPass Test2");
 	}
 	
 	

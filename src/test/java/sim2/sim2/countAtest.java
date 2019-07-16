@@ -8,9 +8,10 @@ public class countAtest {
 
 	@Test
 	public void test() {
+		System.out.println("countAtest");
 		App test = new App();
 		int output =test.countA("alphabet");
-		assertEquals(2,output);
+		assertEquals(3,output);
 		
 	}
 

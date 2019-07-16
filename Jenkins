@@ -4,6 +4,7 @@
 //log.info 'Starting'
 //log.warning 'Nothing to do!'
 
+<<<<<<< HEAD
 node{
 
 stage ('Checkout'){
@@ -23,10 +24,54 @@ stage('Test'){
 	   }
  //   buildTest()
 
+=======
+pipeline{
+
+	agent any
+	
+stages{
+stage ('Checkout'){
+   
+   steps {
+            echo "Step Checkout"
+              //gitCheckOut()  
+            }
+    
+   
+   
+}
+
+ 
+stage('Test'){
+ when {
+ 			branch 'feature1'
+	   echo "Inside When"
+	   
+	   steps {
+            echo "Step TEST"
+                
+            }
+	   } 
+	   
+	  
+   //buildTest()
+
+>>>>>>> feature1
 }
 
 stage('Deploy'){
     
+<<<<<<< HEAD
     buildMaven()
   }
 }
+=======
+    steps {
+            sh "Step Deploy"
+             // buildMaven()
+            }
+   
+  }
+  }
+}
+>>>>>>> feature1
