@@ -8,11 +8,14 @@
 node{
 
 stage ('Checkout'){
+log.info 'Starting'
     gitCheckOut()
+ log.info 'Finished Check Out'
    
 }
  
 stage('Test'){
+
     buildTest()
 }
 
