@@ -8,9 +8,11 @@ public class AppTest {
 
 	@Test
 	public void test() {
+		System.out.println("Square Test");
 		App test =new App();
 		int output = test.square(5);
 		assertEquals(25, output);
+		
 	}
 
 }

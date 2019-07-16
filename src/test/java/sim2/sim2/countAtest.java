@@ -11,7 +11,7 @@ public class countAtest {
 		App test = new App();
 		int output =test.countA("alphabet");
 		assertEquals(2,output);
-		
+		System.out.println("countAtest");
 	}
 
 }
