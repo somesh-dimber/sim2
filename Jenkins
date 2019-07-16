@@ -24,9 +24,6 @@ stage('Deploy'){
     
     buildMaven()
   }
-  else {
-            echo 'I execute elsewhere'
-        }
-  }
+    }
   
 }
