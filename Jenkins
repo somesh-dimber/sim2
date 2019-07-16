@@ -1,49 +1,32 @@
 #!/usr/bin/env groovy
-@Library('sim2@feature1')_
+@Library('sim2')_
 
 //log.info 'Starting'
 //log.warning 'Nothing to do!'
 
-pipeline{
 
-	agent any
-	
-stages{
-stage ('Checkout'){
+node{
+	log.info 'Starting Pipeline'
+			stage ('Checkout'){
+				    log.info 'Starting'
+   					gitCheckOut()
+ 					log.info 'Finished Check Out'
    
-   steps {
-            echo "Step Checkout"
-              //gitCheckOut()  
-            }
-    
-   
-   
-}
-
+				}
  
-stage('Test'){
- when {
- 			branch 'feature1'
-	   echo "Inside When"
-	   
-	   steps {
-            echo "Step TEST"
-                
-            }
-	   } 
-	   
-	  
-   //buildTest()
+					stage('Deploy'){
 
-}
+    							buildMaven()
+    							
+					}
+ 				if (env.BRANCH_NAME == 'master'){
 
-stage('Deploy'){
+						log.info 'Inside if statement'
+					
+					stage('TEST'){
     
-    steps {
-            sh "Step Deploy"
-             // buildMaven()
-            }
-   
-  }
-  }
-}
+    					buildTest()
+  						}
+   					 }
+  
+			}
