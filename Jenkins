@@ -18,9 +18,15 @@ stage('Test'){
 
     buildTest()
 }
-
+ if (env.BRANCH_NAME == 'master'){
+log.info 'Inside if statement'
 stage('Deploy'){
     
     buildMaven()
   }
+  else {
+            echo 'I execute elsewhere'
+        }
+  }
+  
 }
