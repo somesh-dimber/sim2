@@ -4,7 +4,7 @@
 //log.info 'Starting'
 //log.warning 'Nothing to do!'
 
-node{
+pipeline{
 
 stage ('Checkout'){
     gitCheckOut()
@@ -15,10 +15,11 @@ stage ('Checkout'){
 stage('Test'){
  when {
  			branch 'feature1'
-	   
+	   echo "Inside When"
 	   } 
 	   
-    buildTest()
+	  
+   //buildTest()
 
 }
 
