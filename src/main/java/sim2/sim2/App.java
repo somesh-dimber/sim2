@@ -10,7 +10,9 @@ public class App
     
     public int square (int x) {
     	
+    	System.out.println("Square"+x*x);
     	return x*x;
+    	
     	
     }
     
