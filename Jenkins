@@ -18,7 +18,10 @@ stage('Test'){
 	   
 	   } 
 	   
-    buildTest()
+	   steps{
+	   echo "Reached to WHEN"
+	   }
+ //   buildTest()
 //
 }
 
