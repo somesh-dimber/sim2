@@ -6,9 +6,17 @@
 
 pipeline{
 
+	agent any
+	
 stages{
 stage ('Checkout'){
-    gitCheckOut()
+   
+   steps {
+            echo "Step Checkout"
+              gitCheckOut()  
+            }
+    
+   
    
 }
 
@@ -17,6 +25,11 @@ stage('Test'){
  when {
  			branch 'feature1'
 	   echo "Inside When"
+	   
+	   steps {
+            echo "Step TEST"
+                
+            }
 	   } 
 	   
 	  
@@ -26,6 +39,10 @@ stage('Test'){
 
 stage('Deploy'){
     
+    steps {
+            echo "Step Deploy"
+              buildMaven()
+            }
     buildMaven()
   }
   }
