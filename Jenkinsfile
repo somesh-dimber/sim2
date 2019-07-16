@@ -21,7 +21,7 @@ node {
 try {
     
   
-   stage('\u2778 Build') {
+   stage('\u2777 Build') {
       // Run the maven build
       withEnv(["M2_HOME=$mvnHome"]) {
          if (isUnix()) {
@@ -35,8 +35,19 @@ try {
    catch(exc){
        echo "Build Failed"
    }
+   
+   stage('\u2778 TEST') {
+      // Run the maven build
+      withEnv(["M2_HOME=$mvnHome"]) {
+         if (isUnix()) {
+            sh '"$M2_HOME/bin/mvn" -Dmaven.test.failure.ignore clean package'
+         } else {
+            bat(/"%M2_HOME%\bin\mvn" -Dmaven.test.failure.ignore test package/)
+         }
+      }
+   }
 
-   stage('Results') {
+   stage('\u2779 Results') {
       junit '**/target/surefire-reports/TEST-*.xml'
       archiveArtifacts 'target/*.jar'
    }
