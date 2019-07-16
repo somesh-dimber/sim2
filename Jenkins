@@ -19,7 +19,7 @@ stage('Test'){
 	   } 
 	   
     buildTest()
-
+//
 }
 
 stage('Deploy'){
