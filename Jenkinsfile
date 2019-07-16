@@ -21,7 +21,7 @@ node {
 try {
     
   
-   stage('\u2777 Build') {
+   stage('\u2778 Build') {
       // Run the maven build
       withEnv(["M2_HOME=$mvnHome"]) {
          if (isUnix()) {
