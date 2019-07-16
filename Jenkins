@@ -1,14 +1,29 @@
-@Library('sim2@master')_
+#!/usr/bin/env groovy
+@Library('sim2@feature1')_
 
-import evenOrOdd
+//log.info 'Starting'
+//log.warning 'Nothing to do!'
 
-stage('Demo') {
+node{
 
-  echo 'Hello World'
+stage ('Checkout'){
+    gitCheckOut()
+   
+}
 
-  sayHello 'Dave'
-  
-    checkStatus()
-  
-  
+ 
+stage('Test'){
+ when {
+ 			branch 'feature1'
+	   
+	   } 
+	   
+    buildTest()
+
+}
+
+stage('Deploy'){
+    
+    buildMaven()
+  }
 }
