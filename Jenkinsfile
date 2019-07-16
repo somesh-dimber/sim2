@@ -46,9 +46,19 @@ try {
          }
       }
    }
-
+	
    stage('\u2779 Results') {
       junit '**/target/surefire-reports/TEST-*.xml'
       archiveArtifacts 'target/*.jar'
    }
+   
+  stage('Brabch Verifier'){
+  agent any
+  when{
+    branch 'feature1'
+  }
+  steps {
+    echo 'run this stage - ony if the branch = feature branch'
+  }
+}
    }
