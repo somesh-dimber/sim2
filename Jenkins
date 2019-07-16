@@ -1,32 +1,30 @@
-pipeline {
-    agent any
+#!/usr/bin/env groovy
+@Library('sim2@feature1')_
 
-    stages {
-        stage ('Compile Stage') {
+//log.info 'Starting'
+//log.warning 'Nothing to do!'
 
-            steps {
-                withMaven(maven : 'Maven') {
-                    sh 'mvn clean compile'
-                }
-            }
-        }
+node{
 
-        stage ('Testing Stage') {
+stage ('Checkout'){
+    gitCheckOut()
+   
+}
 
-            steps {
-                withMaven(maven : 'Maven') {
-                    sh 'mvn test'
-                }
-            }
-        }
+ 
+stage('Test'){
+ when {
+ 			
+ 			branch 'feature1'
+	   
+	   } 
+	   
+    buildTest()
 
+}
 
-        stage ('Deployment Stage') {
-            steps {
-                withMaven(maven : 'Maven') {
-                    sh 'mvn deploy'
-                }
-            }
-        }
-    }
+stage('Deploy'){
+    
+    buildMaven()
+  }
 }
