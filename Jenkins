@@ -13,7 +13,7 @@ stage ('Checkout'){
    
    steps {
             echo "Step Checkout"
-              gitCheckOut()  
+              //gitCheckOut()  
             }
     
    
@@ -41,9 +41,9 @@ stage('Deploy'){
     
     steps {
             echo "Step Deploy"
-              buildMaven()
+             // buildMaven()
             }
-    buildMaven()
+   
   }
   }
 }
