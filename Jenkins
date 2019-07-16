@@ -22,7 +22,7 @@ stage('Test'){
 	   echo "Reached to WHEN"
 	   }
  //   buildTest()
-//
+
 }
 
 stage('Deploy'){
