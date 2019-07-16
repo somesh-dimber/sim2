@@ -52,13 +52,24 @@ try {
       archiveArtifacts 'target/*.jar'
    }
    
-   stage('Example') {
+ 
         if (env.BRANCH_NAME == 'feature1') {
-            echo 'I only execute on the master branch'
+            echo 'I only execute on the feature1 branch'
+         stage('\u277A RETEST') {
+      // Run the maven build
+      withEnv(["M2_HOME=$mvnHome"]) {
+         if (isUnix()) {
+            sh '"$M2_HOME/bin/mvn" -Dmaven.test.failure.ignore clean package'
+         } else {
+            bat(/"%M2_HOME%\bin\mvn" -Dmaven.test.failure.ignore test package/)
+         }
+      }
+   }
+            
         } else {
             echo 'I execute elsewhere'
         }
-    }
+    
     
    
      }
