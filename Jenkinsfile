@@ -52,13 +52,4 @@ try {
       archiveArtifacts 'target/*.jar'
    }
    
-  stage('Branch Verifier'){
-  agent any
-  when{
-    branch 'feature1'
-  }
-  steps {
-    echo 'run this stage - ony if the branch = feature branch'
-  }
-}
-   }
+     }
