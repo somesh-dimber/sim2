@@ -24,10 +24,9 @@ node{
 
 						log.info 'Selected Master Branch'
 					
-					stage('TEST'){
+			stage('TEST'){
     
     					buildTest()
   						}
    					 }
-  
-			}
+  			}
