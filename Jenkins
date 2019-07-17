@@ -14,14 +14,15 @@ node{
    
 				}
  
-					stage('Deploy'){
-
-    							buildMaven()
+			stage('BUILD'){
+					log.info 'Starting Build Maven'
+    					buildMaven()
     							
 					}
+					
  				if (env.BRANCH_NAME == 'master'){
 
-						log.info 'Inside if statement'
+						log.info 'Selected Master Branch'
 					
 					stage('TEST'){
     
