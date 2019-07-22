@@ -19,6 +19,11 @@ node{
     					buildMaven()
     							
 					}
+					stage('CLEAN'){
+					log.info 'Starting Build Maven'
+    					build()
+    							
+					}
 					
  				if (env.BRANCH_NAME == 'master'){
 
