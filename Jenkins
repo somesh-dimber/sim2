@@ -21,7 +21,7 @@ node{
 					}
 					stage('CLEAN'){
 					log.info 'Starting Build Clean'
-    					build()
+    					build('TEST')
     							
 					}
 					
