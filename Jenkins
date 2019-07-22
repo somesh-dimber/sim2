@@ -6,10 +6,7 @@
 
 
 node{
-	ansiColor('xterm'){
 	
-	stage "\u001B[31mI'm Red\u001B[0m Now not"
-	}
 	log.info 'Starting Pipeline'
 			stage ('Checkout'){
 				    log.info 'Starting'
@@ -21,6 +18,7 @@ node{
 			stage('BUILD'){
 					log.info 'Starting Build Maven'
     					buildMaven()
+    					if(currentBuild.currentResult == 'SUCCESS'){echo "Build is Success"}
     							
 					}
 					stage('CLEAN'){
