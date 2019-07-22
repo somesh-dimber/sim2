@@ -18,7 +18,7 @@ node{
 			stage('BUILD'){
 					log.info 'Starting Build Maven'
     					buildMaven()
-    					if(currentBuild.currentResult == 'SUCCESS'){echo "Build is Success"}
+    					if(currentBuild.currentResult == 'SUCCESS'){echo "Build is Success ${currentBuild}"}
     							
 					}
 					stage('CLEAN'){
