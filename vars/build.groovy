@@ -1,4 +1,4 @@
-def call(String mavenCommand ='clean') {
+def call(String mavenCommand ='test') {
 	
 	
 	mvnHome = tool 'maven3'
