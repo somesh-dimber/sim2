@@ -29,16 +29,17 @@ node{
 					
  				if (env.BRANCH_NAME == 'feature1'){
 
-						log.info 'Selected Master Branch'
+						log.info 'Selected Master ${env.BRANCH_NAME}'
 					
 			stage('TEST'){
     
     					buildTest()
   						}
-  			echo "Directory will be deleted ${deleteDir()}"
+  			
             echo 'One way or another, I have finished'
             
             deleteDir() /* clean up our workspace */
+            echo "Directory will be deleted ${deleteDir()}"
      
    					 }
   			}
