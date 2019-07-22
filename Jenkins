@@ -20,7 +20,7 @@ node{
     							
 					}
 					stage('CLEAN'){
-					log.info 'Starting Build Maven'
+					log.info 'Starting Build Clean'
     					build()
     							
 					}
