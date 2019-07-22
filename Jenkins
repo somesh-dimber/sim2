@@ -29,7 +29,7 @@ node{
 					
  				if (env.BRANCH_NAME == 'feature1'){
 
-						log.info 'Selected Master ${env.BRANCH_NAME}'
+						log.info "Selected Master ${env.BRANCH_NAME}"
 					
 			stage('TEST'){
     
