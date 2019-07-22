@@ -5,7 +5,7 @@ def call(String mavenCommand ='clean') {
 	
 	withEnv(["M2_HOME=$mvnHome"]) {
 		
-		log.info "Starting Maven command ${mavenCommand}"
+		log.warning "Starting Maven command ${mavenCommand}"
 		bat(/"%M2_HOME%\bin\mvn" -Dmaven.test.failure.ignore ${mavenCommand} package/)
 	//bat(/"${mvnHome}\bin\mvn" -Dintegration-tests.skip=true clean package/)
 	def pom = readMavenPom file: 'pom.xml'
