@@ -35,9 +35,9 @@ node{
     
     					buildTest()
   						}
-  			
+  			echo "Directory will be deleted ${deleteDir()}"
             echo 'One way or another, I have finished'
-            echo "Directory will be deleted ${deleteDir()}"
+            
             deleteDir() /* clean up our workspace */
      
    					 }
