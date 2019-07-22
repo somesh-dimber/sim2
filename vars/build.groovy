@@ -11,6 +11,7 @@ def call(String mavenCommand ='clean') {
 	print pom.version
 	//junit '**//*target/surefire-reports/TEST-*.xml'
 	//archive 'target*//*.jar'
+	log.info "Finished Maven command ${mavenCommand}"
 	
 	}
 	
