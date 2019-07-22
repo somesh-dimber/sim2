@@ -27,7 +27,7 @@ node{
     							
 					}
 					
- 				if (env.BRANCH_NAME == 'master'){
+ 				if (env.BRANCH_NAME == 'feature1'){
 
 						log.info 'Selected Master Branch'
 					
