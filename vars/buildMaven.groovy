@@ -6,7 +6,7 @@ def call() {
 	
 	withEnv(["M2_HOME=$mvnHome"]) {
 		
-		bat(/"%M2_HOME%\bin\mvn" -Dmaven.test.failure.ignore compile verify package/)
+		bat(/"%M2_HOME%\bin\mvn" -Dmaven.test.failure.ignore clean compile  package/)
 	//bat(/"${mvnHome}\bin\mvn" -Dintegration-tests.skip=true clean package/)
 //	def pom = readMavenPom file: 'pom.xml'
 	print pom.version
