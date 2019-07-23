@@ -53,7 +53,7 @@ try {
    }
    
  
-        if (env.BRANCH_NAME == 'master') {
+        if (env.BRANCH_NAME == 'feature1') {
             echo 'I only execute on the feature1 branch'
          stage('\u277A RETEST') {
       // Run the maven build
