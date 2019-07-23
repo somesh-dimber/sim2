@@ -25,9 +25,9 @@ try {
       // Run the maven build
       withEnv(["M2_HOME=$mvnHome"]) {
          if (isUnix()) {
-            sh '"$M2_HOME/bin/mvn" -Dmaven.test.failure.ignore clean package'
+            sh '"$M2_HOME/bin/mvn" -Dmaven.test.failure.ignore compile package'
          } else {
-            bat(/"%M2_HOME%\bin\mvn" -Dmaven.test.failure.ignore clean package/)
+            bat(/"%M2_HOME%\bin\mvn" -Dmaven.test.failure.ignore compile package/)
          }
       }
    }
@@ -40,7 +40,7 @@ try {
       // Run the maven build
       withEnv(["M2_HOME=$mvnHome"]) {
          if (isUnix()) {
-            sh '"$M2_HOME/bin/mvn" -Dmaven.test.failure.ignore clean package'
+            sh '"$M2_HOME/bin/mvn" -Dmaven.test.failure.ignore test package'
          } else {
             bat(/"%M2_HOME%\bin\mvn" -Dmaven.test.failure.ignore test package/)
          }
@@ -53,13 +53,13 @@ try {
    }
    
  
-        if (env.BRANCH_NAME == 'feature1') {
+        if (env.BRANCH_NAME == 'master') {
             echo 'I only execute on the feature1 branch'
          stage('\u277A RETEST') {
       // Run the maven build
       withEnv(["M2_HOME=$mvnHome"]) {
          if (isUnix()) {
-            sh '"$M2_HOME/bin/mvn" -Dmaven.test.failure.ignore clean package'
+            sh '"$M2_HOME/bin/mvn" -Dmaven.test.failure.ignore test package'
          } else {
             bat(/"%M2_HOME%\bin\mvn" -Dmaven.test.failure.ignore test package/)
          }
