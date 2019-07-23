@@ -67,7 +67,7 @@ try {
    }
             
         } else {
-            echo 'I execute elsewhere'
+            echo "Branch is ${env.BRANCH_NAME}"
         }
     
     
