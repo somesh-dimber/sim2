@@ -12,7 +12,7 @@ public class AppTest {
 		App test =new App();
 		int output = test.square(5);
 		assertEquals(25, output);
-		
+		System.out.println("I am in square");
 	}
 
 }
